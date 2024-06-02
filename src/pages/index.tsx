@@ -53,3 +53,9 @@ export default function Home() {
     </ModalContext.Provider>
   );
 }
+
+export async function getServerSideProps() {
+  return {
+    props: {}, // Pass no data if you don't need to
+  };
+}

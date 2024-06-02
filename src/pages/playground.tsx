@@ -32,3 +32,9 @@ function playground() {
 }
 
 export default playground;
+
+export async function getServerSideProps() {
+  return {
+    props: {}, // Pass no data if you don't need to
+  };
+}
