@@ -17,7 +17,6 @@ function SvgBlob({
       height={Math.floor(Math.random() * 101) + 300}
       alt={name || "background-svg"}
       className={cssClass}
-      style={{ width: "auto", height: "auto" }}
     />
   );
 }
