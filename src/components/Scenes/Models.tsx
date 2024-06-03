@@ -78,18 +78,38 @@ export function Models(props: any) {
     tl.current.to(
       torRef.current.position,
       {
-        duration: 0.1,
-        z: -3,
-        x: 1,
-        y: -8,
+        duration: 0.4,
         onStart: () => {
           setAnimation("tor");
         },
+      },
+      1
+    );
+
+    tl.current.to(
+      torRef.current.position,
+      {
+        duration: 0.4,
+        z: -3,
+        x: 1,
+        y: -8,
+
         onComplete: () => {
           setAnimation("");
         },
       },
       1.2
+    );
+
+    tl.current.to(
+      octRef.current.position,
+      {
+        duration: 0.4,
+        onStart: () => {
+          setAnimation("tor");
+        },
+      },
+      2.2
     );
 
     tl.current.to(
@@ -102,9 +122,9 @@ export function Models(props: any) {
         onStart: () => {
           setAnimation("oct");
         },
-        onComplete: () => {
-          setAnimation("");
-        },
+        // onComplete: () => {
+        //   setAnimation("");
+        // },
       },
       2.6
     );
